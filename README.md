@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
+1. monitor gmail new email arrive and retrieve message information
+1. trigger sidekiq worker in rails application for further processing
 
 * System dependencies
+1. sidekiq
+2. redis
 
 * Configuration
+1. in `imap_idle.rb`, change `USERNAME` and `PW`
+2. in `mail_retrieve_worker.rb`, change `GMAIL_USERNAME` and `GMAIL_PW`
 
-* Database creation
+* Usage
+run in development env, `RAILS_ENV=development ruby imap_idle.rb`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
